@@ -25,22 +25,32 @@ const Player = (board) => {
   const getTurn = () => {
     return turn;
   };
-  const playerMove = (row, col) => {
-    if (board[row][col] != "") {
-      alert("taken");
-    } else {
-      board[row][col] = getPlayerSymbol();
-    }
-  };
+
   return {
     setPlayerSymbol,
     getPlayerSymbol,
     setTurn,
     getTurn,
-    playerMove,
     setWin,
     getWin,
   };
 };
 
-export { Player };
+const HardAI = (board) => {
+  const defaultFunctionality = Player(board);
+  return Object.assign({}, defaultFunctionality);
+};
+
+const EasyAI = (board) => {
+  const defaultFunctionality = Player(board);
+  return Object.assign({}, defaultFunctionality);
+};
+
+const Human = (board) => {
+  const defaultFunctionality = Player(board);
+  const makeMove = () => {
+    console.log("Making a move");
+  };
+  return Object.assign({}, defaultFunctionality, { makeMove });
+};
+export { EasyAI, HardAI, Human };
