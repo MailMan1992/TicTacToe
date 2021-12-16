@@ -1,0 +1,71 @@
+main,
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  position: relative;
+}
+
+.container {
+  display: none;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.play-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.head-title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.tic-tac-toe {
+  font-size: 3em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 350px;
+  width: 350px;
+  /* row-gap: 30px; */
+}
+
+.tic-tac-toe {
+  justify-self: center;
+  padding: 0;
+  margin: 0;
+  border: 2px solid black;
+}
+.tic-tac-toe div {
+  display: flex;
+  border: 1px solid grey;
+  justify-content: center;
+  align-items: center;
+  /* justify-self: center;
+  align-self: center; */
+  /* width: 100%; */
+}
+
+.tic-tac-toe div p {
+  margin: 0;
+}
+
+.visible {
+  display: flex;
+}
+
+.invisible {
+  display: none;
+}
